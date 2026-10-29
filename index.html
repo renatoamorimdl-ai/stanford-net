@@ -128,8 +128,7 @@ em.hl{font-style:italic;color:var(--dourado);font-weight:500}
 .trust-item strong{display:block;font-family:var(--f-titulo);font-size:clamp(1.4rem,2.4vw,1.8rem);color:var(--dourado-claro);line-height:1.1;font-weight:600;margin-bottom:6px}
 .trust-item span{font-size:.78rem;color:#8ea2bd;letter-spacing:.06em}
 .insurers{margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.06);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 34px}
-.insurers .lbl{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#7389a6;width:100%;text-align:center}
-.insurer-slot{height:38px;min-width:120px;border:1px solid rgba(255,255,255,.08);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:#5f7593;padding:0 14px}
+.insurers .lbl{font-size:clamp(.95rem,1.6vw,1.15rem);letter-spacing:.18em;text-transform:uppercase;color:var(--branco);font-weight:600;width:100%;text-align:center;line-height:1.5}
 
 /* Valor real (antiga seção de riscos) */
 .uses{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px;border-top:1px solid var(--borda)}
@@ -165,6 +164,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
 input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--navy);border:3px solid var(--branco);box-shadow:0 0 0 1px var(--navy)}
 input[type=range]:focus-visible{outline:2px solid var(--dourado);outline-offset:6px}
 .calc-out .lbl{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dourado-escuro);font-weight:700}
+.calc-note{font-size:.88rem;line-height:1.55;color:var(--texto-suave);margin:10px 0 2px}
 .calc-total{font-family:var(--f-titulo);font-size:clamp(2.6rem,4.4vw,3.5rem);font-weight:600;color:var(--navy);line-height:1.05;margin:10px 0 8px}
 .calc-rows{list-style:none;padding:0;margin:26px 0;border-top:1px solid var(--borda)}
 .calc-rows li{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--borda);font-size:.9rem}
@@ -448,11 +448,6 @@ footer{background:var(--navy-escuro);color:#8395ad;padding:64px 0 110px;font-siz
     </div>
     <div class="insurers">
       <span class="lbl">Trabalhamos com as principais seguradoras do país</span>
-      <div class="insurer-slot">logo seguradora</div>
-      <div class="insurer-slot">logo seguradora</div>
-      <div class="insurer-slot">logo seguradora</div>
-      <div class="insurer-slot">logo seguradora</div>
-      <div class="insurer-slot">logo seguradora</div>
     </div>
   </div>
 </div>
@@ -532,8 +527,8 @@ footer{background:var(--navy-escuro);color:#8395ad;padding:64px 0 110px;font-siz
   <div class="container">
     <div class="center" style="max-width:760px">
       <span class="eyebrow">Calculadora de proteção</span>
-      <h2>Quanto de proteção faz sentido para você?</h2>
-      <p class="sub center">Uma estimativa baseada no método de análise de necessidades usado no mercado: custos de sucessão, padrão de vida e dívidas, descontando o que você já tem.</p>
+      <h2>Você sabe de quanto precisaria para se proteger?</h2>
+      <p class="sub center">Faça uma estimativa baseada no método de análise de necessidades usado no mercado: custos de sucessão, padrão de vida e dívidas, descontando o que você já tem.</p>
     </div>
 
     <div class="calc reveal">
@@ -571,6 +566,7 @@ footer{background:var(--navy-escuro);color:#8395ad;padding:64px 0 110px;font-siz
       </div>
       <div class="calc-out">
         <span class="lbl">Proteção sugerida</span>
+        <p class="calc-note">Esse é o valor que você precisaria ter guardado para eventualidades e que seria usado em caso de necessidade. Com o seguro você recebe sem precisar se desfazer do seu patrimônio.</p>
         <div class="calc-total" id="o-total">R$ 0</div>
         <div class="calc-bar" aria-hidden="true">
           <span id="b1" style="background:var(--navy-vivo)"></span>
@@ -813,7 +809,7 @@ footer{background:var(--navy-escuro);color:#8395ad;padding:64px 0 110px;font-siz
       <p>Atendo famílias, empresários e profissionais autônomos que buscam mais do que uma apólice: querem saber, com clareza, o que acontece com o patrimônio, com a empresa e com quem depende deles.</p>
       <p>Meu trabalho começa sempre pela escuta. Antes de falar de produto ou preço, entendo sua família, seu negócio e seus planos. Só depois construo, junto com você, uma estratégia sob medida.</p>
       <div class="creds">
-        <div class="cred ph"><b>Registro SUSEP</b>nº 000000000</div>
+        <div class="cred"><b>Registro SUSEP</b>nº 21.2117879</div>
         <div class="cred"><b>Sem letras miúdas</b>Cada cobertura e exclusão explicada antes de assinar</div>
         <div class="cred"><b>Independente</b>Compara várias seguradoras, sem vínculo com banco</div>
         <div class="cred"><b>Presença</b>Atendimento online em todo o Brasil e presencial</div>
@@ -996,8 +992,7 @@ footer{background:var(--navy-escuro);color:#8395ad;padding:64px 0 110px;font-siz
       </div>
     </div>
     <div class="legal">
-      <span class="ph-tag">Preencher</span><br/>
-      Stanford Corretora de Seguros · CNPJ 00.000.000/0000-00 · SUSEP nº 000000000.<br/>
+            Stanford Corretora de Seguros · CNPJ 42.262.682/0001-50 · SUSEP nº 21.2117879.<br/>
       A aceitação do seguro está sujeita à análise do risco pela seguradora. O registro do produto na SUSEP não implica incentivo ou recomendação à sua comercialização. Consulte as condições gerais do produto no site da seguradora. Informações legais têm caráter educativo e não substituem orientação jurídica ou tributária individual.
     </div>
   </div>
