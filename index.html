@@ -355,8 +355,17 @@ footer{background:var(--navy-escuro);color:#8395ad;padding:64px 0 110px;font-siz
   .calc-in,.calc-out,.form,.panel-card{padding:30px 22px}
   .creds,.form .row{grid-template-columns:1fr}
   .cred:nth-child(even){padding-left:0;border-left:0}
-  .compare{overflow-x:auto}
-  .compare table{min-width:620px}
+  .compare{border:0;box-shadow:none;border-radius:0;overflow:visible}
+  .compare table,.compare tbody,.compare tr,.compare td{display:block;width:100%}
+  .compare thead{display:none}
+  .compare table{background:none}
+  .compare tr{background:var(--branco);border:1px solid var(--borda-suave);border-radius:var(--r-lg);box-shadow:var(--sombra);margin-bottom:14px;overflow:hidden}
+  .compare td{border-bottom:0;padding:12px 18px}
+  .compare td:first-child{width:100%;padding:16px 18px 6px;font-family:var(--f-titulo);font-size:1.3rem;line-height:1.2}
+  .compare td.bad,.compare td.good{font-size:.92rem}
+  .compare td.good{border-top:1px solid var(--borda-suave);padding-bottom:16px}
+  .compare td[data-label]::before{content:attr(data-label);display:block;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin-bottom:4px;color:#9a8f86}
+  .compare td.good[data-label]::before{color:var(--dourado-escuro)}
   .topbar{font-size:.72rem}
   .trust-grid{grid-template-columns:1fr 1fr}
   .tabs{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
@@ -512,7 +521,7 @@ footer{background:var(--navy-escuro);color:#8395ad;padding:64px 0 110px;font-siz
     </div>
 
     <div class="bridge reveal">
-      <p>Proteção não é sobre o pior cenário. <span class="gold">É sobre viver o melhor sem freio</span>: investir, empreender e crescer sabendo que a base está garantida.</p>
+      <p>Proteção não é só para o pior cenário. <span class="gold">É para viver o melhor agora com mais tranquilidade</span>: investir, empreender e crescer sabendo que a base está garantida.</p>
       <a href="#calculadora" class="btn btn-gold">Calcular minha proteção</a>
     </div>
   </div>
@@ -758,12 +767,12 @@ footer{background:var(--navy-escuro);color:#8395ad;padding:64px 0 110px;font-siz
           <tr><th></th><th>Sem planejamento</th><th class="col-good">Com a estratégia Stanford</th></tr>
         </thead>
         <tbody>
-          <tr><td>Acesso ao dinheiro</td><td class="bad">Bloqueado até o fim do inventário</td><td class="good">Indenização direto aos beneficiários</td></tr>
-          <tr><td>Pagamento do ITCMD</td><td class="bad">Família precisa tirar do bolso ou vender bens</td><td class="good">Custeado pela indenização do seguro</td></tr>
-          <tr><td>Padrão de vida</td><td class="bad">Cortes imediatos, dívidas se acumulam</td><td class="good">Mantido pelo período que você definiu</td></tr>
-          <tr><td>Empresa</td><td class="bad">Herdeiros na gestão, caixa comprometido</td><td class="good">Sócios compram a parte com recursos do seguro</td></tr>
-          <tr><td>Conflitos familiares</td><td class="bad">Disputa pela partilha</td><td class="good">Beneficiários e percentuais definidos por você</td></tr>
-          <tr><td>Na hora do sinistro</td><td class="bad">Família sozinha diante da seguradora</td><td class="good">Corretor acompanha a família em todo o processo</td></tr>
+          <tr><td>Acesso ao dinheiro</td><td class="bad" data-label="Sem planejamento">Bloqueado até o fim do inventário</td><td class="good" data-label="Com a estratégia Stanford">Indenização direto aos beneficiários</td></tr>
+          <tr><td>Pagamento do ITCMD</td><td class="bad" data-label="Sem planejamento">Família precisa tirar do bolso ou vender bens</td><td class="good" data-label="Com a estratégia Stanford">Custeado pela indenização do seguro</td></tr>
+          <tr><td>Padrão de vida</td><td class="bad" data-label="Sem planejamento">Cortes imediatos, dívidas se acumulam</td><td class="good" data-label="Com a estratégia Stanford">Mantido pelo período que você definiu</td></tr>
+          <tr><td>Empresa</td><td class="bad" data-label="Sem planejamento">Herdeiros na gestão, caixa comprometido</td><td class="good" data-label="Com a estratégia Stanford">Sócios compram a parte com recursos do seguro</td></tr>
+          <tr><td>Conflitos familiares</td><td class="bad" data-label="Sem planejamento">Disputa pela partilha</td><td class="good" data-label="Com a estratégia Stanford">Beneficiários e percentuais definidos por você</td></tr>
+          <tr><td>Na hora do sinistro</td><td class="bad" data-label="Sem planejamento">Família sozinha diante da seguradora</td><td class="good" data-label="Com a estratégia Stanford">Corretor acompanha a família em todo o processo</td></tr>
         </tbody>
       </table>
     </div>
